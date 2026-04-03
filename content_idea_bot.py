@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+  from openai import OpenAI
 
   # --- Config ---
   st.set_page_config(page_title="Content Idea Generator", page_icon="💡")
@@ -60,7 +60,6 @@ from openai import OpenAI
               st.warning("Please select at least one content type.")
           else:
               with st.spinner("Generating ideas..."):
-                  # Build the prompt
                   legal_section = ""
                   if is_legal and practice_area:
                       legal_section = f"""
@@ -116,7 +115,6 @@ from openai import OpenAI
                       st.subheader("📋 Content Ideas")
                       st.markdown(ideas)
 
-                      # Download button
                       st.download_button(
                           label="Download Ideas",
                           data=ideas,
