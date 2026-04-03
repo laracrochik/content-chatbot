@@ -17,7 +17,7 @@ if not st.session_state.authenticated:
                               st.rerun()
       else:
                     st.error("Incorrect password.")
-            st.stop()
+      st.stop()
 
 st.title("💡 Content Idea Generator")
 
