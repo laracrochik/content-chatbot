@@ -23,7 +23,7 @@ def check_password():
 check_password()
 
 # ── Anthropic client ───────────────────────────────────────────────────────────
-client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # ── UI ─────────────────────────────────────────────────────────────────────────
 st.title("💡 Content Idea Generator")
