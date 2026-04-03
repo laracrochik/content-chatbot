@@ -1,25 +1,25 @@
-import streamlit as st
-from openai import OpenAI
-import requests
-from bs4 import BeautifulSoup
+  import streamlit as st
+  from openai import OpenAI
+  import requests
+  from bs4 import BeautifulSoup
 
-st.set_page_config(page_title="Content Idea Generator", page_icon="💡")
+  st.set_page_config(page_title="Content Idea Generator", page_icon="💡")
 
-if "authenticated" not in st.session_state:
-    st.session_state.authenticated = False
+  if "authenticated" not in st.session_state:
+      st.session_state.authenticated = False
 
-if not st.session_state.authenticated:
-    st.title("🔐 Content Idea Generator")
-    password = st.text_input("Enter password:", type="password")
-    if st.button("Login"):
-        if password == st.secrets.get("APP_PASSWORD"):
-            st.session_state.authenticated = True
-            st.rerun()
-        else:
-            st.error("Incorrect password.")
-    st.stop()
+  if not st.session_state.authenticated:
+      st.title("🔐 Content Idea Generator")
+      password = st.text_input("Enter password:", type="password")
+      if st.button("Login"):
+          if password == st.secrets.get("APP_PASSWORD"):
+              st.session_state.authenticated = True
+              st.rerun()
+          else:
+              st.error("Incorrect password.")
+      st.stop()
 
-st.title("💡 Content Idea Generator")
+  st.title("💡 Content Idea Generator")
 
   client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
