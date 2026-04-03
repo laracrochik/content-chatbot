@@ -1,5 +1,5 @@
 import streamlit as st
-  from openai import OpenAI
+from openai import OpenAI
 
   # --- Config ---
   st.set_page_config(page_title="Content Idea Generator", page_icon="💡")
