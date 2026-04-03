@@ -1,5 +1,5 @@
 import streamlit as st
-import anthropic
+from openai import OpenAI
 
 # ── Page config ────────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Content Idea Generator", page_icon="💡", layout="centered")
