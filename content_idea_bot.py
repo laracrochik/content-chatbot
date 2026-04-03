@@ -28,8 +28,8 @@ def scrape_website(url):
                 if not url.startswith("http"):
                               url = "https://" + url
                               headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-        response = requests.get(url, headers=headers, timeout=10)
-        soup = BeautifulSoup(response.text, "html.parser")
+                              response = requests.get(url, headers=headers, timeout=10)
+                              soup = BeautifulSoup(response.text, "html.parser")
 
         for tag in soup(["script", "style", "nav", "footer", "header"]):
                       tag.decompose()
