@@ -36,7 +36,7 @@ def scrape_website(url):
 
                               text = soup.get_text(separator=" ", strip=True)
                               return text[:8000]
-                          except Exception as e:
+      except Exception as e:
                               return f"Error scraping website: {str(e)}"
 
 with st.form("client_form"):
