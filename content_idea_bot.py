@@ -57,10 +57,10 @@ else:
         content_types = []
         if do_socials:
                       content_types.append("social media posts")
-                  if do_blogs:
-                                content_types.append("blog articles")
-                            if do_emails:
-                                          content_types.append("email campaigns")
+        if do_blogs:
+                      content_types.append("blog articles")
+        if do_emails:
+                      content_types.append("email campaigns")
 
         if not content_types:
                       st.warning("Please select at least one content type.")
