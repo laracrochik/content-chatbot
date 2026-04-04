@@ -40,7 +40,7 @@ def scrape_website(url):
                               return f"Error scraping website: {str(e)}"
 
 with st.form("client_form"):
-      st.subheader("Client Information")
+    st.subheader("Client Information")
     website_url = st.text_input("Client's Website URL", placeholder="example.com")
 
     st.subheader("Content Types Needed")
