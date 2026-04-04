@@ -64,13 +64,13 @@ else:
 
         if not content_types:
                       st.warning("Please select at least one content type.")
-else:
+        else:
             with st.spinner("Scanning website..."):
                               website_content = scrape_website(website_url)
 
             if website_content.startswith("Error"):
                               st.error(website_content)
-else:
+            else:
                 with st.spinner("Analyzing business and generating ideas..."):
                                       system_prompt = """You are a creative content strategist. You will be given the text content from a client's website.
 
