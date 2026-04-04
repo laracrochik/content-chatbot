@@ -84,7 +84,7 @@ else:
                                       - A brief summary of the business (2-3 sentences)
                                       - Clear sections for each content type requested
                                       - For each idea: a headline/hook, why it's relevant, and a brief description"""
-                      user_prompt = f"""Here is the website content for a client:
+                                                          user_prompt = f"""Here is the website content for a client:
 
                     ---
                     {website_content}
